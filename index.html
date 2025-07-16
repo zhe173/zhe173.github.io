@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" DIR="ltr">
+    <head>
+            <meta charset="UTF-8">  
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <title style>台中城市之光聖教會</title>
+            <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+            <style>
+                .btn{background:#FFCCCC;
+                    padding:8px;border-radius:5px;
+                    cursor:pointer;}
+                    
+                body{background-color: #FFF0F5; font-family:"Comic Sans MS","Noto Sans TC";}
+
+                .frame{
+                    display:flex;
+                     background-color:#00FF00;
+                     padding: 20px 0;
+                }
+                .left{
+                    flex:none;
+                    display: flex;
+                    width:200px;
+                     background-color:#FFFFFF;
+                     height: 50px;
+                    text-align: center;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .right{
+                    display: flex;
+                    justify-content: flex-end;
+                    flex:auto;
+                    background-color:#000080;
+                    height: 50px;
+                    text-align: center;
+                    align-items: center;
+                }
+                .item{
+                    flex:none;
+                    width:100px;
+                    margin-right:10px;
+                    text-align: center;
+                      background-color:#FFCCCC
+                }
+                .welcome{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    height:50px;
+                    background-color: #808000;   
+                }
+                .text{
+                    width:300px;
+                    height:400px;
+                    font-size:30px;
+                    font-weight:bold;
+                    text-align:center;
+                     background-color:#A52A2A;
+                }
+                .frame1{
+                    display:flex;
+                     background-color:#00FF00;
+                }
+                .left1{
+                    flex:none;
+                    width:30%;
+                    background-color:#00FF00;
+                    border-right: 1px solid black;
+                    text-align: center;
+                    
+                }
+                .right1{
+                    flex:none;
+                    width:30%;
+                     background-color:#A52A2A;
+                     border-left: 1px solid black;
+                    justify-content: flex-end;
+                    text-align: center;
+                    
+                }
+                .medium1{
+                    display: flex;
+                    flex:auto;
+                    background-color:#FFFFFF;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                }
+
+                  .end{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #808000; 
+                    text-align: center;
+                    justify-content: center;
+                    align-items: center; 
+                    margin-top: 10px;
+                }
+                
+            </style>
+                
+
+    </head>
+    <body>        
+        <div class="frame">
+            <div class="left" style="font-size: large;font-weight: bold;">台中城市之光聖教會</div>
+            <div class="right">
+                <div class="item">
+                    <div class="btn"
+                         onmouseover="over(this)"
+                         onmouseout="out(this)"
+                         onmouseup="up(this)"     
+                         onclick="changeContent('首頁<br>主日崇拜：每週日 上午 10:00')"                  
+                    >首頁</div>
+                </div>
+                <div class="item">
+                    <div class="btn"
+                         onmouseover="over(this)"
+                         onmouseout="out(this)"
+                         onmouseup="up(this)"
+                         onclick="changeContent('這是關於我們的介紹')"
+                    >關於</div>
+                </div>
+                <div class="item">
+                     <div class="btn"
+                         onmouseover="over(this)"
+                         onmouseout="out(this)"
+                         onmouseup="up(this)"
+                         onclick="changeContent('聯絡資訊：<br>電話:04-12345678<br>地址:台中市xx區xx路xx號xx樓<br>信箱:asdzxc@gmail..com')"                        
+                    >聯絡</div>
+                </div>
+            </div>  
+        </div>       
+            <div class="welcome">歡迎光臨</div> 
+            <br/>
+             <div class="frame1">       
+             <div class="left1"><img src="未命名.png" style="width: 80%; height: auto;">
+                                <img src="未命名1.png" style="width: 80%; height: auto;">
+                                <img src="未命名2.png" style="width: 80%; height: auto;">
+             </div>
+             <div class="medium1" id="mainContent">這是首頁內容</div>
+             <div class="right1"><img src="未命名3.png" style="width: 80%; height: auto;">
+                                 <img src="未命名4.png" style="width: 80%; height: auto;">
+                                 <img src="未命名5.png" style="width: 80%; height: auto;">   </div>
+             </div>
+             <br/>
+            <div class="end">
+                <a href="https://www.youtube.com/@%E5%8F%B0%E4%B8%AD%E5%9F%8E%E5%B8%82%E4%B9%8B%E5%85%89%E8%81%96%E6%95%99%E6%9C%83" target="_blank">
+                <b>台中城市之光聖教會 YT</b>
+                <img src="https://training.pada-x.com/imgs/youtube.png" alt="YouTube">
+                <a href="https://www.facebook.com/tccitylightchurch/?locale=zh_TW" target="_blank">
+                <b>台中城市之光聖教會 FB</b>
+                <img src="https://training.pada-x.com/imgs/facebook.png" alt="Facebook">
+             </a>    
+            </div> 
+             <script>
+                function over(elem){
+                    elem.style.backgroundColor="#DDAAAA";
+                }
+                function out(elem){
+                   elem.style.backgroundColor="#FFCCCC";
+                }
+                function up(elem){
+                   elem.style.fontWeight="normal";
+                }
+                 function down(elem){
+                   elem.style.fontWeight="bold";
+                }
+                 function changeContent(text){
+                   document.getElementById("mainContent").innerHTML = text;
+                }
+
+              </script> 
